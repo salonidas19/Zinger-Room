@@ -1,0 +1,479 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="bootstrap.min.css" type="text/css">
+
+    <title>Hello, world!</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" type="text/css" href="animate.css" />
+    
+    <script type="text/javascript"
+        src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=kTvNFaUJED0voZSy2y5_8b00K0ynnhddYuKjCBjx5n1Vk4HyMqq5wjNzYP-FcMvfOYChgJzeSXTQkszub-lBkNNqw7oFS9rbiAamZlWkn7XHJUnCATRDGo8QKIVUn8uOBc9GGWywCrIvrQs8R_FnEATmD3-2reCbpbiX1xna4Z55yukFl0LwWAqS7WHwW_oktS39I8Ndw2dngeOBIB0wpMHb-A4GjdYkKfCLTyUOC3iH9HHcqPoyNYkCUZ2PziTqa-kXJDDLcUr3A_-sHODcLzlILJVsr9HDzRbo4JtPhUcR2eSXz2Ioegc9YyQfEaqvADUAhVWmKIAP_Vzs6qbmEEkTfx_v0Bijxh4jTDrjLXxNzETL9CWFPnrkBIXxDC0G92ENQDrODUwKJHtaxJgiJLUxT8Fff9Q6VfI1UzAOwXF2Gbe1nmhCikIKpbOzjwhLLqAUEVag_TotniwnXCApiqQ-SLYWhddb3d5HD8cX97A3Vj4ocIjzBYrz2KprPUIxi7KeSX5mA6x62oFCp367ANQVnm7QA-Ukk3h_pBavHJY0pKrz3X9oKdijtPFax16k5jka-3dvgtv8jSuRKIlC5N5dlQ-z5b_lAhUnO5dw4Gj84KPhwE3W2OiGSoGrA-InbKDRUGO__wAO6NMuwfq_B0Rt9vnsiKYDHbBF7xa3tv6Dt6PfQ9VwHCaChVP7v2x-slAmlWtXOgHuogKdNT4_CTsi2dwGg5eRPlSB007_hIhfpL9k52PsWQRvrGt-A_cIRJQrITSqgF5ggmqqN2_FmmSkCV01dxt1XuKdx0DcbOVFq6NMq-4q9jd4J-bG00VYYe1Lw13H-qhSlTGtBeGvw6M5nlnQsgysOorcMg7NeFtMFzVO1CAZcprocwADdTBOBnmpB_oQsbtGvR8blvMkVSp2KD-9UDDviuMoVsr6Vhl_vc5XEwK6CfyKEMXWHvU6F7Qt1lfPwLiPTr53nC8VU5JbNhidUHu67SF9HjRXMOlxeEipT0_nMGYuo48iVQ6HgR6KfbCCOlnUWHUNJoNtmKXnwEtffsYT0QxaYZsjwc8326-FquxccDCmT50TexEktyafVTutr_-OPAxJ_JtXH4qqyTo-P3iSrGL0Wwoi_oDWsuTGmvuZrmHK7yCiKFdvpN1n0WAfM8tmGSzk7glFf_e8e4fUi9i1co6pi_16MDBr0jSGXn-T-x_97p7PPMcVbBv4ysscDcQhDDWMt5fYsfCK4f5xMkLGHE0p5DT5RbrzzKE6ITAhYP3AUNyF7ZbGgiuvqi7kr6BYsiyjcBtGPfgV7Iel5mOKE-W4W7pA5472lSFcMWPQG2LONpWXniHPcFFV90rSWOCQOp2J-dRk-mp5hCtJoSCZwQpcssWjyF69zUzjJ2NCL2QQ9KgkSq3kU9SpnS65qF7I7EB4qhtrs_XyPXcybWqnc5ZdbK3iGrYE4qbIpKp0EWFPaxPSkKiJkOO5vylZe9z6tF5oJHYQNq1R_pQwZ3RuFwgU0VAfuoXVumATIuPY5bQjQVw6mUAp5pSU4iFB7i1JHXxSdLRLDYraTltnYyMMOjF6rQPdwBs"
+        nonce="8f9c14a48a3c9deceb490c7e2f8d6008" charset="UTF-8"></script>
+    <link rel="stylesheet" crossorigin="anonymous"
+        href="https://gc.kis.v2.scr.kaspersky-labs.com/E3E8934C-235A-4B0E-825A-35A08381A191/abn/main.css?attr=aHR0cHM6Ly9tYWlsLWF0dGFjaG1lbnQuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2F0dGFjaG1lbnQvdS8wLz91aT0yJmlrPThhOTQ2ODI2NWUmYXR0aWQ9MC4xJnBlcm1tc2dpZD1tc2ctYTpyLTYzODE4OTMxNDU3NzE5MTUzNjAmdGg9MTg0M2I1ZDI4NzFjMmZlMCZ2aWV3PWF0dCZkaXNwPXNhZmUmcmVhbGF0dGlkPWZfbGEwZ28xbmYwJnNhZGRiYXQ9QU5HamRKLThuY3hGNXF4NzFfczVGeXZUMWc1RzMxQTMtQUxKQWt4U1RCak5LblNUWnpaQ2hjMjFHR0dTanhtZjhTV0I5ekM0NUE0MVBPRlJ0bFRIRVdqMHo5R1FDazl5WHlFM000N2hTdnFpY0ZMRl9RaHZ3djR0dUo4d2F0ZDlSX3NoQXNQT1FSQTlCczNYOHNvRkE5aUFlS2Z2MUFUbG40cjdNaFpSZEJvWF9PUzhLdEZBZVJ5YkxFT2NVY1l6WjRXb0V4U3lLN3JSQy1fSUl2VzhBaWxPSkgxQWVVZGxxUkpBUzNfMmVXYWVkTmlNeTh4Yk1iOXpsRkhCSkRyOXhGbkJVSEdMZVZYM2pjampCbGhfWjZlSnB5TkZLQWtxXzRtZlVNYnJSbzg5TExZcm5YOEhLaXFhdzlsZFZicXBNWHh0c09UTm5FQ09nYVdQcFNyQjI5QUwtQVFNdjhvRThEcERFcUNITUd1SnNHT0J1VVo1ZnpaejFyVW94aThzU2diRUJSaEZvd0F4Si01T21kQnhIUVJGQkl5cWkxVXRvYkxSNFRiclFtREtjeTVWYzdaTHpsTWxYYUJ5Nk9WQ1NTVW5Zc3J6OVpDbWdaQ0NZZ2NuSEUwQ1ZCR050cmVFaWdSYVZpOGQ5cUtHelZPcEtfZDluN01Wcy1vUXpWaXRQUkc2ejBHNDdwRmhGS1RPcldXMW15aWlhLV9CMUhWZnJwMlJ5bEpoWkozRUhKb21PTkdOcC1EX180SWxIRUZBY3pJQ2tzV2VLMW1TaGMtX2RmSU03c2VoWmJOaURZSkFjREQyM1ZOQkhHRlNZYjVCOHY2QU50a3JhY0lwaWQwSnlDUGQ3SkxvZG13R3VsdFpKMVZkalpCSmY3dS1GalFScjdTT3NCSno3UEVPUnhKQkhxTC0wVG85UlFSTnlpQXRyVkNoX1NIekNtNVlWNnVFQjVrYVUyQ0xfYmFFZEY5Q3F0S1JJU1ZRWnR2Ync1SjIzZUJHM2xsX2tMZS1aMnlLYzlTSi1vNUJ0TWNMazd2S2lFQWZDa2F1ekcwMmwzdktzR3cyUnJMdlQydWIwUWw2LWx1QllLUGhMdWp4V2NhbmNGdDJmNWlUU1FaZUQ4ZHNXYzVnSU9Zd090Sk5RZ0VqN3d4TDc1ZFBfME1OSkFsX0h3LWdUOFRERFJTa2FsVnIxU1l4UUpIdmNnbG12QzVveXYtWUQxMXozak5BZG1vVG9RVFBxZmRUamE3N0tOTHFaYVZFbDQ1cTFsLXRiUWs" />
+    
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+</head>
+
+
+<body>
+
+
+
+    <header class="menuarea">
+        <div id="flipkart-navbar">
+            <div class="container-fluid">
+                <div class="row row1">
+                    <ul class="largenav pull-right">
+
+                        <nav class="navbar navbar-expand-lg">
+
+                            <ul class="navbar-nav">
+                                <li class="active">
+                                    <a href="#" class="nav-link">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">Product</a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a href="contact.html" class="nav-link">Contact Us</a>
+                                </li>
+                                <li class="active">
+                                    <a href="#" class="nav-link">About us</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">Book Rooms</a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">Special Rooms</a>
+                                </li>
+                                <li class="nav-item">
+
+                                    <a href="#" class="nav-link">Dropdown</a>
+
+                                </li>
+
+
+                            </ul>
+                </div>
+                </nav>
+                <ul class="dropdown-menu">
+                    <li class="profile-li"><a class="profile-links" href="http://yazilife.com/">Link</a></li>
+                    <li class="profile-li"><a class="profile-links" href="http://hacksociety.tech/">Link</a></li>
+                    <li class="profile-li"><a class="profile-links" href="http://clashhacks.in/">Link</a></li>
+                    <li class="profile-li"><a class="profile-links" href="http://clashhacks.in/">Link</a></li>
+                    <li class="profile-li"><a class="profile-links" href="http://clashhacks.in/">Link</a></li>
+                    <li class="profile-li"><a class="profile-links" href="http://clashhacks.in/">Link</a></li>
+                    <li class="profile-li"><a class="profile-links" href="http://clashhacks.in/">Link</a></li>
+                </ul>
+                </li>
+                </ul>
+            </div>
+            <div class="row row2">
+                <div class="col">
+                    <h2 style="margin:0px;"><span class="smallnav menu" onclick="openNav()">☰ Brand</span></h2>
+                    <h1 style="margin-left:25px;"><span class="largenav">ℤ𝕀ℕ𝔾𝔼ℝ ℝ𝕆𝕆𝕄𝕊</span></h1>
+                </div>
+                <div class="flipkart-navbar-search smallsearch col-sm-8 col-xs-11">
+                    <div class="row">
+                        <input class="flipkart-navbar-input col-xs-11" type=""
+                            placeholder="Search for Your Dream Room" name="">
+                        <button class="flipkart-navbar-button col-xs-1">
+                            <svg width="15px" height="15px">
+                                <path
+                                    d="M11.618 9.897l4.224 4.212c.092.09.1.23.02.312l-1.464 1.46c-.08.08-.222.072-.314-.02L9.868 11.66M6.486 10.9c-2.42 0-4.38-1.955-4.38-4.367 0-2.413 1.96-4.37 4.38-4.37s4.38 1.957 4.38 4.37c0 2.412-1.96 4.368-4.38 4.368m0-10.834C2.904.066 0 2.96 0 6.533 0 10.105 2.904 13 6.486 13s6.487-2.895 6.487-6.467c0-3.572-2.905-6.467-6.487-6.467 ">
+                                </path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="cart largenav col">
+                    <a class="cart-button">
+                        <svg class="cart-svg " width="20 " height="20 " viewBox="0 0 16 16 ">
+                            <path
+                                d="M15.32 2.405H4.887C3 2.405 2.46.805 2.46.805L2.257.21C2.208.085 2.083 0 1.946 0H.336C.1 0-.064.24.024.46l.644 1.945L3.11 9.767c.047.137.175.23.32.23h8.418l-.493 1.958H3.768l.002.003c-.017 0-.033-.003-.05-.003-1.06 0-1.92.86-1.92 1.92s.86 1.92 1.92 1.92c.99 0 1.805-.75 1.91-1.712l5.55.076c.12.922.91 1.636 1.867 1.636 1.04 0 1.885-.844 1.885-1.885 0-.866-.584-1.593-1.38-1.814l2.423-8.832c.12-.433-.206-.86-.655-.86 "
+                                fill="#fff "></path>
+                        </svg> Bookings
+                        <span class="item-number ">0</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        </div>
+
+        <div id="mySidenav" class="sidenav">
+            <div class="container-fluid" style="background-color: #2874f0; padding-top: 10px;">
+                <span class="sidenav-heading">Home</span>
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+            </div>
+            <a href="http://clashhacks.in/">Link</a>
+            <a href="http://clashhacks.in/">Link</a>
+            <a href="http://clashhacks.in/">Link</a>
+            <a href="http://clashhacks.in/">Link</a>
+        </div>
+    </header>
+    <section class="testimonials text-center mybg-music">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12 wow fadeInUp">
+                    <h1 class="title-heading text-center font-weight-bold">Zinger Rooms</h1>
+                    <p class="myp text-center">Chilling out on the bed in your hotel room watching television, while
+                        wearing your own pajamas, is sometimes the best part of a vacation.Son, brother, father, lover,
+                        friend. There is room in the heart for all the affections, as there is room in heaven for all
+                        the stars.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6 col-md-4 col-lg-2 mt-4 gal-item wow bounceInUp" data-wow-duration="1.4s">
+                    <div class="music-gal item box">
+                        <a href="https://images.pexels.com/photos/761963/pexels-photo-761963.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+                            class="fancybox" rel="ligthbox">
+                            <img class="img-fluid"
+                                src="https://images.pexels.com/photos/164595/pexels-photo-164595.jpeg?auto=compress&cs=tinysrgb&w=600">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-2 mt-4 gal-item wow bounceInUp" data-wow-duration="1.4s">
+                    <div class="music-gal item box">
+                        <a href="https://images.pexels.com/photos/838696/pexels-photo-838696.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+                            class="fancybox" rel="ligthbox">
+                            <img class="img-fluid"
+                                src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoHCBUWFRgVFhUYGBgYGBgYGBkYGBgYGBgYGBgaGRgYGBgcIS4lHB4rHxgYJjgmKy8xNTU1GiQ9QDs0Py40NTEBDAwMEA8QHhISHzQrJCs0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NP/AABEIALcBEwMBIgACEQEDEQH/xAAcAAABBQEBAQAAAAAAAAAAAAADAQIEBQYABwj/xABIEAACAQIDBAYHAwoDBwUAAAABAgADEQQSIQUxQVEGImFxkaETMlKBscHRFEJyI2KCkqKys8Lh8BXE8QckM2NztOIWU3Sj0v/EABoBAAMBAQEBAAAAAAAAAAAAAAABAgMEBQb/xAAmEQACAgICAQUAAwEBAAAAAAAAAQIREiEDMUEEEyJRkSNxgWFS/9oADAMBAAIRAxEAPwDQhZ2WSKmGZd405jURgE+dcWuz24tDVJEKjxuWLljTaB0ySjwqtIQMKjzWMiHElRCINHhLy7ENIg2EKYMmJgCcQTLJBjbSGhpkbJOyQ5jGEVDsCRGMsORECwFZHKxLSQUgysVDTGCOEULFCwAbaLaOnWjAS07LH5Z1oANyxGWFAjXEYiLUkYyRWMComb7KHIsKywlCnpfnFqLKS0KyI4iosULfWEywGMtKzbW1BRWwsXb1Ry/OPZ2cZJ2ptBaS83Pqr8z2TE4lmdizG5JuTNIRtkSlS0RqzlmLEkkm5JO+dCejM6a0YnsSYgjeIT0SP2Hs0jFEkU6QMUYuWnsqUktkN8Ew1HWHZv8ACBtNAmHPA37D9YPEU1Isy2bt+REuXpNWtEx590yitEKydVwXFTfsP1kZkI0ItOSUJR7OiMoy6BgwivG5YhESk0PQUNFMBeODzRSIcQhjZ2aJeMVCGMaOJjSZIxpiCKTGkxDFJjTOvEvAEhItokUGIYoEW0SLeFgdHRt52aFgOg6jTmeR61WJyBIFVMdhqWYhfHukdXu0vNmUQFzHe27uEfHHKQpPFD/Q9kh16ZJsPfLTF4pRYKDc6am9z8hG1wEFt53k8zOr2k+n0YrkZVeitA4moEHC/AE2/sR+0NoKi5m7lHFjyExuJxzu5Zj4bgOAEjFWaZMbiXzOzO1yT5DgOyRcTUAOgiMZGr6tLTV6M2O9MZ0FOhkFHsiCTsMkiUlklsaiMFYkEi97Ei17akbprxJLbM+Rt6RdYekLSNjqVh2RcNjFYXVgw7CD8Iaq4YWnZqS0cu09lBUSx6pt8JwcnRlv5+UPiUsYlHfOOUPlR1KXxsCcIG9U27P71EjV8My+sPfwmip4cMuq+/j7pXYosp35h27/ABi5PTxUbCHO3KinIjCJKqMp4WMCyzglGujrTsFmih4jLBsIsqHVhc0QtI+ePBhkGI4mNvOnWhkAl4l4tp1oWAmadmi2nWhsDrmdFtFtCmA0CLaPCGdljUWK0Dyxj07wqm5tbhH5YYhZXJS69uEm18ZYR5SRa6CNXFaB0wuzyXcHnul30gpZctuUq9iL+UTsN/CXG3XzDundwxvhZy8j/lR530l9dPwfzGUwGvul10h9dfwD95pmsXihchTbgW+nP4d8xjFyNZSUQO08VkXqkXut+4sLix98Bh8VmUljdgbHTw8oDGKCuntLft6y6mVr4jIWHMg+U6o8acKXZzym1LZcfaZ0o/tBnReyGZ9F1amXdvlZhcRfEvnIsKanXcAGNz2bpZ4pNZT4UWxZ7aXwf+s522ppPo2SWNonuaD39G6hlOpHW4E6Ea27QYVHrrbI6uDawvffzDdbdwvM3j9lth89RagWncm1rm+Xqg8LXvrw0jaOOqohZ3yrYFswzNztl3A3tYduonU0ltKv6JUXJd/ppKu1SAc6EWvrqNBxs2ltPakjB42m33gOxurvF9CdDpymXobffKzhSUUKxIJvlYkDS2XeCO+TaW0qDgFqZzMDlOUAmw5rbcBE4yTu/wBFSaqvw3dCsLdkg7RTiJn8LUpNpRqsrG50NxftBt4Xkyo+IVSWZHAF9RZrcRpu85c+RuNNfhkuLGVpgaiyOyyZWGsjNPOmtnbF6BEmMJvCkRuWZUWCWmSdAYT0LDhJeEpG+h8frCY3DqN7Mrcjcr7iJouH45Gb5PliVzC0aTHNhSWF93OPZLTOv+F2R2YwL4i25GPcPmZJYSC+KNyBTc2NteqD3dkcY2Juh32hzupn3uo8heERnO8IP0iT8JENep/7Kj8TqfpEXaDKes9BRxBYA/vS8BZFmt+NoQSv/wAYocaqe5s3wif49hx9+/crfSRWx2TqlEkbz4ybsqmoTrX9Zu+VCdIKPDMfcPmZJXbKEaIfeQJrxpJ2TK2qJuIVL5l4kjw/1go2lXzojWtcvpe+4qI6OS2THoRhItcSUxkWuZLRSJOw/XJ5D4xdv7USkuZzvvYbr+/hG7JNlJ5zIf7SXuE7n+KTt4tcaRyzXzbM30h6RZ2PWFt2m+3LTcP77Jmm2j2yDXBJgghnRHjikYSnJsuMLi1Y5SSLsmttwDrc+F4HbYQV3CG6aZTYi4sOB133gtmL1/d8xG4w2c6XOlvDlKSSegvQimdG5zOioo+mq4lMdMSnaj+RX6y5qSoxS2xFI/m1B5KflOCS+VnVF6oZ0oP+7sbXs9M25/lEFvfe3vmV2niy9B79UksxB4DOTlJ9oG4I4TW9IUzYaoN3VDX5ZWDX8pmcNjAzo+7rq7pyawR7DfuXN23PI23cv4/6aYRTUr8NNEcYkCiqXVEZKbOwBLWvZiQAQ/WbiRqTCDaCh6VNGLorWRyoDENdje3bead0VrucpRWK30KWBKuTc8z+z2zB18aDiAqaIKzlBfcGO8chYDTumnDyLljPXSZhh7copO7ZtdkuTUqAcCLjKDqFuwAP50u3qE03BvfI33SultBrMpsh71XHtJTb1M1gVQCwvfTMBfX3y/opo1lAAUg6Oh3HcraTOUvj/hs18n/ZIU3UQTQlP1RGOJwS6RsuwRiRY28ksstkJmYX3DUzulLFAzqAbKSAd1xCbM6ovzg+kAz0nH5p+E71FezX+nE3/MUH+KuV9ZA1h1RvF92l5QYvamJNyrm1r6ILWsGvfLyIPvllUTIQfaan5PTT4OZX1PUHavl9mzfETibs6qorauKxJ31H47jl3WvutzEjVKNZr5nc8NX7cvPnLfEqMrnscfs0vm0R0uSOTP5V1ELYqKFdnMzAX38Sb+0P5D4wlTZLI5S4NiBcdt/pL7DUAXGn33H7WJ+kdiU/L970fNqgMrIVFBQ2cx429Tjf1t3wkrCbNLEX45D+ixe+ncnnJ+Hbqr2/ZR5VD8pL2e2qfhT44g/KK9gRMNs7Qa6lEYGw3u9hv7JPw2Ff0ti5KFHIU2sCtUrwHIRdm6qn/Tw/kzGWgFirdjjxqsYJ6GrtEpKWREH4z4ssUQaV8zZPZW/6x/8AGHVZb2/wFoaRI9ZNJPFOMelBwYsgGCFkExP+0d7eh/T/AJZt10Ew/wDtHS4o/p/yzq43pIwmu2eaOf3p1Majv+ULWoG7WF+sIRMKwYXFusN5tvXTQ6zqtUc2LG4HRh23+MFtBruOwW8yfnJCrly6jt/XkfFC7nvtBPyNrwLTXQRZIp0jYaTpGRpR9GNKvaCEVKL20DPmOugKHf7wJZk9o8RGn3eInFJnTFURqroyMpswIIKnjcbpQ4jYq1Hz5DSNrWR6YUkAm4sNLkAeBl+wtw+ES45fCSuRlpV0VOEwbohQF2U71f0VzmuTYoRpffqN/GPxeFdqRRbJcKlhTU2Tkqh7AC1paZl7PKNJT839mLJXdE4bszuG2bVSurglwyZHLK175swsFtb1Rx0ueyXdE6G4a+UhdKgFrEm+YkX03whCcl/Zg3SlxCeUcuW10CgSqPqDuEa8aMUgHrqP0hAvjE9tfETJtUWlscY1BrBDGITYOpJ3C4hkElbZT6LGi9hG4t+o34T8IFXg8XU6jnkrH9kzrz+FHPj8rKDFVL5O9P41GV+JHVT8H+VeEd/U71/i0IKu1wn4f8q840bvtg8Q3Vfuf4YeIPWPaX/7lYlY9V+5v3KBiK3W/Sqf9ykpCJWHb8on/Ub44qdjz+VT8dL9+qYKi/5RP+s/+Z+sdjT+UT8aeXpoPsXgi4I3yd+G/cqfWStn76f4R+7iD85EwG9O/DfwnkzZ41pfhH8OsYPyBLwOlND/AMqkP2T9ZJqVup+k48XMj4T1EF/uUd34DLWhhgaDnOgvfRj1tGJ0jgsm0DeNMi7J1qPrfqJ8Xl4qyp2Knrvzyp4Ak/GWoedMIrszk9sOsQiDDxc010ZkMyi6R7ParkypnKhrXtYZit9D2CXriMExto0qzznGbJqglWVUs2a1wDqNNAwB5633yrxGABdmJ1JVtLnVRYaG3xM2fSB/yr9y/uCUOl27o1yNIHBFE2EFtE7izE27QBbXvvI1PZpv75oUGkCoHnGuWWxOCIK4Izpa6TpnkysUa9FvrJFOnc3gaQtpNDgNnqyq+bhqLbuB4znhxubpG0pKKtlWmGJjxhjL8bMXg/l/WPXZg9seH9ZuvTT+jL34/Znjh4N6c03+HoN7MfARfs9L2Ae/WUvSy80J+oj4Mp6O8RqM1Zo0/YXwgnp0vYHnB+lf2gXOvox1VZDxKEA2ve2nDW2k3LvST7qL2kKPMzN7YxNN6uZWD2CFgNRod19x0AmPJw4K7suM3J1RWYI/lUIv6437981N5nHxys6BKap111W199uQkvbFRirKGK3BAIuCLi17jvkxSsp9F0HFr3Ej43EpkcZlvkbiPZM8wwGPcAjPVABGgewC3AcHstxtLnZYBoVUZUYo6hT6MNo2VhZtNLHj85vhRFrtEj0tymvEfxKH0MSrVAVbnhx/+M9pS4NV9ItgAQCxsAt71EtYcrX384Xa9yi/mlG9y02J8gZm4rJIMtNk4YtWV1VlYlTYAg/cog+YPhG1cYim7MAL1OPtV0ZfEAmVmGDnrKjva46qFhYqltVHYdOwSDjcNUOrU3UXG9GAvcZdSOdpouNXQWsb8mowldWdCCCPTNu7RWPzh8a/5RPxL8K0pNinSl+NfNX+sssY/XX8Y/dq/WZSVSBO4j8F9z8WG/gtOq12RKTr91qF/wAJRsw8DA4R/U7Go+VH+sE9U+hPZSQjvFIkecaWwvRoNnqWRFAuQmGJ7Bk1J5DUQuJR1KKwIvlPeCxvumSp7fqIQKdQoMi7kRswCqLkspPFRJuG6YlFzOPSEt1XbKhGmoGVZS4xZOzX0MWlPDI7aXZ721JOaw+EGNv0ebeH9ZRN0hFahmaiuRHXqk3DZwxPAWPb2yqG26YJH2VOP3jw/Rjt9LwCivJtP8do8z4f1hsdjslMvkLagWUFbjmDroeB7ZhF29T3fZE/XP8A+ZL/APUyogRaFl4Wfd4pLjKn8hSimtFxsTal1KVQKbrUcMrOpILNnAzbjo/DlLxTxE81xGKDKR1zd87M7KzM4GUaqqgC3C09Fw3qL+FfhJlJXopX5Ml0hrj09Qcsv7iyl9L60k9Ja3+81B2jyRZT+m0aTtoG9kxKmkAHg6dXqwS1I0nsl+Cw9JOkfPOkUaHoapLvo9VJR0P3Tf3MPqDK5aUmbE6tV1toyX7Lqf8Ayj4NTQcu4svVaRdo4pkRmUZiova9r23690lkaSNXXQz0JXWjijV7KBOlCEAlSO8/0nVOky62C+Z+EzOPwRDsqLmOYjQFjbhoOy0Jh+j2JfdTcdrWQeDEHynGnN9HoY8UdtIsavSJywN7AMpNt1gQTu1tAdN2IqU3DEXVhobXF7i/98ZJodDHOtSqi913PnlA85oH2LRdEV89XIAAb2vYW1K2HnNI8cmmpGU+WCkmvH0eZNXa2p95ljsTC1aj2UGzAjOVbILai7AEcLe+eg4fY9JNVoop5kBmHvP1k30fb4aRr06fZMvU3pIyVDozUzBndRlZSLXO434gcpLxux3Y3VlPiPlaaEqBGND2IIyXLJnmdToziFd2CWu7kHLRcZS1xa5zDSw95h8BhcRRasWw+cPkK/k0NiqlSqreyi2Xs3T0BlgisGl1ZSkzAinVd7thqiEKd1JVGrod62H3d0Dj8LUy29DU9Vtclx/wnHDvOnu4iehERjLMnBXaLs86+2YlEzFnUAnSxB3KfVuBzkLHbTrHqMM6hgTmN9VcCxXiCcvGeoFZS9J9nh6LMFu62ZSBdjlYNlHeVEFSexW6ox2zzcp21AdNB6hOg98m4n11/H/K8scH0bC5LO4ykEaJvy5dRblJrdHgxH5Rrg3HVXkRra3tGYy3Ky1pUZ3Dfd/EnlRWCb1WHKmg/wDrtL87CscoqXswt1NMwTJb19eqJA2vs3JRchwWKBbZLXIGUZSGO8W3x+Q8GaFWnZVZXBKqAFC71Azbzx0MhY1KJW4NTcSt8tr2vz7pZYjZrlwVKHISTqRfNqANOUrcbs6oqi+X7q2BJ4ZQb25mdMKtbMpX9F9sgf7me2op/VpsdZWE3JPOWWzlK4NVO/0mU94psJXgazCT+TNV0hrCxHfLTA7JFfQVUV+CMDqOYI390rKo1iYqplyG9jrY9t4LbQfZoG6KVuD0/Fh/LNkjAADkJi9jdLLkJVOvB+J7Dz+PfNKcTcXBuDuIsRKkku0EXfRj+k2BqemqVApKEk3GulgNRw3ShynKe+bHHFyxZHZddQVDKfmPGV1dEcWdAD7SKUN+3eDHkiXEoB6sCGlliMAQOo2YctzeG4+4ysIINjobyo7JeiVedB550VFWe54bZyWBNS/HQBfjeWGGwVNdVGtrXvc25XlNhsTmUW5SdSr6d3+s2g4LaRlNTfbLGpSUj1iB2ECAfDUz9wv33YftG0gLjGNUqdyqCO8kayWMaeM1XJFmbhJBVQgWVEQf390C3nO9ETvc9wso+vnGfbRxE44pecMofYsZBFpINbC/M6nxMcXgDWHONL9sHNLoeD8hWeMZ4IvGlpm5lqI5mjWMQmNJkORSiITGkzmaMZpDkUkIxjCYpkbE4pUF2PcOJ7pm5FJB+2RK9TNoN3xkT7WX13DgIdJjKbekaRjWwtJO0+UkXAG8+MEs6xkob2PSgmum/fv1vvkPH7OR7AJcDX2hfS2h7huksXi5paaEUSbDS75kPWIIyhlygKBzPEE++Uu19jhCFuzAgMNCLWOgPvAm3FSQ8djcjL2j5xtLuxGGClaOXj6Vn/RI0+Jlco1mz21iVemTYZl1BtryYeBMyBpkHXiAR3HUQsKAOOtEq29VhdTvHzHIw7J1ozEprHGW0FaKivs4K6hmORtzgae8cO0TSbGxFWimUuGsCb3zr6wtv42PfI1JA5FNtVdlU34EkAMORF5MXANQU023gnU8bvmHlaaz5MoU+zOMcZWiYNouQCQmt/u/1iVsXYXKjwleH3dnztHV36s5adm96CnFggnKPH+kC7oy3dLjz3c7iRSdIEvoRzIm8UZNhPs9HhnHuX6xILPOlWyS+wXTOomj0la2l0YrpfijaX980uxulNCsxXMUY7lcZbk8AbkE6c55xiKSrcFrnksbh8Uqk9UgH385fa0guns9jY2e+66keFoYkzyvC7aYDKtV1HIORb8I+77pd4TpLXXe6uPz1F/1lt5gzFuuzRU+jdBjEzGZmh0r9ui3fTdX/ZbKfC8mU+k2GOjOUP8AzEZP2iLecabfQUi4LRLmCw+Jp1BmR0cc0YMPEQtpNsKODnnCBzB2nXjyCkFavEWoTAMYSnGpNktJBDGmcxlBtTboXq09T7W/9Uce/dCUkhJE/aO0Vpjm3Acu08pnXqPUbM/Hh8L9nZIq5mbM1yTrz/syxopMJTs1jEk4dJNpyPSWSUEmyyQjQgaBWFWUiGEBigxqiPWXETCqonPhVbeqnvAMcgheE3STRk2yuqbPpEWKL4Srr9HsOx1S3czj4GX7wLreQ0hxZnn6K4c6guvc9/3gZHrdEUO6q47wh+AE0gjrwKMrQ6KOjq61Q2Q5gCgF7cL5vlLfE4GnXUZ1N13gGxU9/s/332yyPikIOdd49Ye0O7jJkhoz9TozS3h3HvU/yyJW6OA7qh96g/OaYsGXMu48OR5GRmMh6KSRlanR5xudT3gj6yE+wK3ND3MfmJtGF4F0jU2gcUYv/B6/sD9ZfrOmwyzo/cYsEEx3Q+hUOZR6L8FyD2kNoPd4zOY/oZXTVMtQfm6N71PyJmq6K7OqUkbOxyuVKLroADc2O69xp2S9ImlsjE8ZrbPZSVZSpG8MLEe47oiUGXcSPf8AWeq7U2NTrC5AV/bAF+5valDW6IPfquhHNsynwsfjJc5BijH08W68j5GS02iDowI7xcS1xfRmumuTOOaHN5b/AClNWwrKbFSp5EWPgZDxfaL2gyCizZlsre0jFGHvWWdLaWIT1a5YcBVUP4sLN5zOtQE4F13Mffr/AFjp+H+iv7RtMP0ncf8AEoE/nUmDe/I1j5mTqfSbDHfUyHk6sp/aFphUxzDeL90N9uVhZgO5h9YtrtfgWvs2Y6T4W4Hpl1F72bL3FrWB75Lr7ZpIoKsHJFwEII7yRoBMLh1S4yqo1G4AfCS2qEnKmp4ngP6xOX/lBX2Tsftao/VJ3/cXQW7eY74Cjh+Lan4d0fh8LbvO88TJ9KkJDZSQyhQk1KcfTpySqSey+gaLDKsVUjgkKEcsMojFWFEtIluxVhFjRHpLiSwqGF4QKmOzTdPRmxjiMj2MbJY0Q8fXVFzm9rgab9ZEp7YpHiR3qfleT8dh86MvMad43TG1EsZlKTizSKTRrE2jSO5195t8ZJSqp3EHuIMwxiFiIlyMeJrMShpkuoup9YHd/p8JASuGF+PGZ98U4Fg7j9I/WDwW0CrWJ1+IibvoLo1AaLItGsGFxDgxFC5Z0XLOgKzSXjWWdOnQzMbYziZ06SUdeDq0Q4syhhyIBHnOnSRlPiujVBtwKH803HgflaUeM6LutyhVx+qfeDp5zp0hgUNbBEGxi0MCYs6RmwxVljQ2NuYnwNj5S1oYdVFgLRJ0JNlJIlpQklKQnToIZICRVE6dGIIBHZZ06MhjgIoEWdGgOj0M6dGhMIDFvOnTVGZ142dOjQCiZ3a+BysSNxPgd9p06RydFx7KhkgnE6dMTUC4BkLEUuWhnTo0QyVs7GEfAiaGi1wCOM6dKY4kq86dOjEf/9k">
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-md-4 col-lg-2 mt-4 gal-item wow bounceInUp" data-wow-duration="1.4s">
+                    <div class="music-gal item box">
+                        <a href="https://images.pexels.com/photos/756242/pexels-photo-756242.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+                            class="fancybox" rel="ligthbox">
+                            <img class="img-fluid"
+                                src="https://images.pexels.com/photos/833045/pexels-photo-833045.jpeg?auto=compress&cs=tinysrgb&w=600">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-2 mt-4 gal-item wow bounceInUp" data-wow-duration="1.4s">
+                    <div class="music-gal item box">
+                        <a href="https://images.pexels.com/photos/167589/pexels-photo-167589.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+                            class="fancybox" rel="ligthbox">
+                            <img class="img-fluid"
+                                src="https://images.pexels.com/photos/1001965/pexels-photo-1001965.jpeg?auto=compress&cs=tinysrgb&w=600">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-2 mt-4 gal-item wow bounceInUp" data-wow-duration="1.4s">
+                    <div class="music-gal item box">
+                        <a href="https://images.pexels.com/photos/167626/pexels-photo-167626.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+                            class="fancybox" rel="ligthbox">
+                            <img class="img-fluid"
+                                src="https://images.pexels.com/photos/271618/pexels-photo-271618.jpeg?auto=compress&cs=tinysrgb&w=600">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-2 mt-4 gal-item wow bounceInUp" data-wow-duration="1.4s">
+                    <div class="music-gal item box">
+                        <a href="https://images.pexels.com/photos/167527/pexels-photo-167527.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+                            class="fancybox" rel="ligthbox">
+                            <img class="img-fluid"
+                                src="https://images.pexels.com/photos/941861/pexels-photo-941861.jpeg?auto=compress&cs=tinysrgb&w=600">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-2 mt-4 gal-item wow bounceInUp" data-wow-duration="1.4s">
+                    <div class="music-gal item box">
+                        <a href="https://images.pexels.com/photos/756242/pexels-photo-756242.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+                            class="fancybox" rel="ligthbox">
+                            <img class="img-fluid"
+                                src="https://images.pexels.com/photos/2096983/pexels-photo-2096983.jpeg?auto=compress&cs=tinysrgb&w=600">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-2 mt-4 gal-item wow bounceInUp" data-wow-duration="1.4s">
+                    <div class="music-gal item box">
+                        <a href="https://images.pexels.com/photos/167589/pexels-photo-167589.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+                            class="fancybox" rel="ligthbox">
+                            <img class="img-fluid"
+                                src="https://images.pexels.com/photos/277572/pexels-photo-277572.jpeg?auto=compress&cs=tinysrgb&w=600">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-2 mt-4 gal-item wow bounceInUp" data-wow-duration="1.4s">
+                    <div class="music-gal item box">
+                        <a href="https://images.pexels.com/photos/167626/pexels-photo-167626.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+                            class="fancybox" rel="ligthbox">
+                            <img class="img-fluid"
+                                src="https://images.pexels.com/photos/1743229/pexels-photo-1743229.jpeg?auto=compress&cs=tinysrgb&w=600">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-2 mt-4 gal-item wow bounceInUp" data-wow-duration="1.4s">
+                    <div class="music-gal item box">
+                        <a href="https://images.pexels.com/photos/167527/pexels-photo-167527.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+                            class="fancybox" rel="ligthbox">
+                            <img class="img-fluid"
+                                src="https://images.pexels.com/photos/3225531/pexels-photo-3225531.jpeg?auto=compress&cs=tinysrgb&w=600">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-2 mt-4 gal-item wow bounceInUp" data-wow-duration="1.4s">
+                    <div class="music-gal item box">
+                        <a href="https://images.pexels.com/photos/167626/pexels-photo-167626.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+                            class="fancybox" rel="ligthbox">
+                            <img class="img-fluid"
+                                src="https://images.pexels.com/photos/53577/hotel-architectural-tourism-travel-53577.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-2 mt-4 gal-item wow bounceInUp" data-wow-duration="1.4s">
+                    <div class="music-gal item box">
+                        <a href="https://images.pexels.com/photos/167527/pexels-photo-167527.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+                            class="fancybox" rel="ligthbox">
+                            <img class="img-fluid"
+                                src="https://images.pexels.com/photos/1267320/pexels-photo-1267320.jpeg?auto=compress&cs=tinysrgb&w=600">
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <section class="head">
+        <div class="container">
+            <h2 class="text-center"><span>Search Where is Your Rooms</span></h2>
+        </div>
+    </section>
+    <div class="clearfix"></div>
+    <section class="search-box">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12 listing-block">
+                    <div class="media">
+                        <div class="fav-box"><i class="fa fa-heart-o" aria-hidden="true"></i>
+                        </div>
+                        <img class="d-flex align-self-start"
+                            src="https://images.pexels.com/photos/2873951/pexels-photo-2873951.jpeg?auto=compress&cs=tinysrgb&w=600"
+                            alt="Generic placeholder image">
+                        <div class="media-body pl-3">
+                            <div class="price">$7999<small>Mumbai</small></div>
+                            <div class="stats">
+
+                                <span><i class="fa fa-bath"></i>2 Beadrooms</span>
+                            </div>
+                            <div class="address">Western Suburbs, Mumbai</div>
+                        </div>
+                    </div>
+                    <div class="media">
+                        <div class="fav-box"><i class="fa fa-heart-o" aria-hidden="true"></i>
+                        </div>
+                        <img class="d-flex align-self-start"
+                            src="https://images.pexels.com/photos/1743229/pexels-photo-1743229.jpeg?auto=compress&cs=tinysrgb&w=600"
+                            alt="Generic placeholder image">
+                        <div class="media-body pl-3">
+                            <div class="price">$6000<small>Mumbai</small></div>
+                            <div class="stats">
+
+                                <span><i class="fa fa-bath"></i>2 Beadrooms</span>
+                            </div>
+                            <div class="address">Western Suburbs, Mumbai</div>
+                        </div>
+                    </div>
+                    <div class="media">
+                        <div class="fav-box"><i class="fa fa-heart-o" aria-hidden="true"></i>
+                        </div>
+                        <img class="d-flex align-self-start"
+                            src="https://images.pexels.com/photos/271643/pexels-photo-271643.jpeg?auto=compress&cs=tinysrgb&w=600"
+                            alt="Generic placeholder image">
+                        <div class="media-body pl-3">
+                            <div class="price">$4500<small>Mumbai</small></div>
+                            <div class="stats">
+
+                                <span><i class="fa fa-bath"></i>2 Beadrooms</span>
+                            </div>
+                            <div class="address">Western Suburbs, Mumbai</div>
+                        </div>
+                    </div>
+                    <div class="media">
+                        <div class="fav-box"><i class="fa fa-heart-o" aria-hidden="true"></i>
+                        </div>
+                        <img class="d-flex align-self-start"
+                            src="https://images.pexels.com/photos/271619/pexels-photo-271619.jpeg?auto=compress&cs=tinysrgb&w=600"
+                            alt="Generic placeholder image">
+                        <div class="media-body pl-3">
+                            <div class="price">$5000<small>Mumbai</small></div>
+                            <div class="stats">
+
+                                <span><i class="fa fa-bath"></i>2 Beadrooms</span>
+                            </div>
+                            <div class="address">Western Suburbs, Mumbai</div>
+                        </div>
+                    </div>
+                    <div class="media">
+                        <div class="fav-box"><i class="fa fa-heart-o" aria-hidden="true"></i>
+                        </div>
+                        <img class="d-flex align-self-start"
+                            src="https://images.pexels.com/photos/1579253/pexels-photo-1579253.jpeg?auto=compress&cs=tinysrgb&w=600">
+                        <div class="media-body pl-3">
+                            <div class="price">$6000<small>Mumbai</small></div>
+                            <div class="stats">
+
+                                <span><i class="fa fa-bath"></i>2 Beadrooms</span>
+                            </div>
+                            <div class="address">Western Suburbs, Mumbai</div>
+                        </div>
+                    </div>
+                    <div class="media">
+                        <div class="fav-box"><i class="fa fa-heart-o" aria-hidden="true"></i>
+                        </div>
+                        <img class="d-flex align-self-start"
+                            src="https://images.pexels.com/photos/6186815/pexels-photo-6186815.jpeg?auto=compress&cs=tinysrgb&w=600"
+                            alt="Generic placeholder image">
+                        <div class="media-body pl-3">
+                            <div class="price">$5500<small>Mumbai</small></div>
+                            <div class="stats">
+
+                                <span><i class="fa fa-bath"></i>2 Beadrooms</span>
+                            </div>
+                            <div class="address">Western Suburbs, Mumbai</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-7 map-box mx-0 px-0">
+                    <iframe width="100%" height="495" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
+                        src="https://maps.google.co.uk/maps?f=q&source=s_q&hl=en&geocode=&815&sspn=8.047465,13.666992&ie=UTF8&hq=&hnear=15+Springfield+Way,+Hythe+CT21+5SH,+United+Kingdom&t=m&z=14&ll=51.077429,1.121722&output=embed"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="food">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-5 col-12">
+                    <img
+                        src="https://images.pexels.com/photos/3475617/pexels-photo-3475617.jpeg?auto=compress&cs=tinysrgb&w=600" />
+                </div>
+                <div class="col-md-7 col-12">
+                    <div class="row">
+                        <h5>_Zinger Resturant_</h5>
+                    </div>
+                    <div class="food1">
+                        <div class="row">
+                            <h1>The best from
+
+                            </h1>
+
+                        </div>
+                        <div class="row">
+                            <h1> Land & Sea</h1>
+                        </div>
+                    </div>
+                    <div class="food2">
+                        <div class="row">
+                            <p>Enjoying stunning panoramic views over the Atlantic Ocean, the Restaurant Mirandus uses
+                                only the freshest of local and seasonal ingredients to create menus around healthy
+                                Mediterranean fare</p>
+                        </div>
+                    </div>
+                    <div class="food3">
+                        <div class="row">
+                            <h4>Discover more -</h4>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="special">
+        <div class="container-fluid">
+            <div class="row">
+
+                <div class="col-md-6 col-12">
+                    <div class="img3">
+                        <img
+                            src="https://images.pexels.com/photos/3212164/pexels-photo-3212164.jpeg?auto=compress&cs=tinysrgb&w=600" />
+                    </div>
+                    <div class="details">
+                        <h1>SPA</h1>
+                        <h5><a href="special.html">Discover More</a></h5>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-12">
+                    <div class="img3">
+                        <img
+                            src="https://images.pexels.com/photos/3822621/pexels-photo-3822621.jpeg?auto=compress&cs=tinysrgb&w=600" />
+                    </div>
+                    <div class="details">
+                        <h1>YOGA</h1>
+                        <div class="special1">
+                            <h5><a href="special.html">Discover More</a></h5>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <section class="packages">
+        <div class="container-fluid">
+            <div class="row">
+
+            </div>
+
+        </div>
+    </section>
+    </div>
+    </div>
+    </section>
+    <footer>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col"></div>
+                <div class="col"></div>
+                <div class="col"></div>
+                <div class="col"></div>
+            </div>
+        </div>
+    </footer>
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+        crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
+    -->
+    <script src="wow.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery-slimScroll/1.3.8/jquery.slimscroll.min.js"></script>
+    <script>
+        $(function () {
+            $('.listing-block').slimScroll({
+                height: '500px'
+            });
+        });
+    </script>
+
+</body>
+
+</html>
